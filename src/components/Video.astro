@@ -1,9 +1,22 @@
 <div class="w-full relative">
-    <video class="w-full h-auto" src="/video.mp4" autoplay loop muted></video>
+    <img
+        class="absolute top-10 z-10 w-[800px] left-0 right-0 m-auto"
+        alt="Esland - Premios a la comunidad hispanohablante de Streaming"
+        src="/logo-home.svg"
+    />
+    <video 
+        class="w-full h-screen object-cover object-top animate-fade ease-in-out animate-duration-[1000ms]" 
+        src="/video.mp4" 
+        autoplay 
+        loop 
+        muted
+        style="clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 50% 100%, 0 85%);"
+    ></video>
     <video 
         class="absolute -bottom-48 blur-3xl -z-40" 
         src="/video.mp4" 
         autoplay 
         loop 
-        muted></video>
+        muted
+        ></video>
 </div>
