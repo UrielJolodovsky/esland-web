@@ -4,7 +4,7 @@ const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<section class="text-xl text-left px-20 max-w-[80ch] text-pretty mx-auto my-24">
+<section class="text-xl sm:text-left text-center px-20 max-w-[80ch] text-pretty mx-auto my-24">
     <img class="w-16 mb-10 m-auto" src="/logo.png" alt="Logo de los Esland">
     <h1 set:html={i18n.INTRO_TITLE} class="text-4xl font-semibold text-center text-wrap mx-auto mb-10 tracking-wide" />
     <p set:html={i18n.INTRO_DESCRIPTION_1}></p>
