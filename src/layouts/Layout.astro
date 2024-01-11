@@ -15,7 +15,7 @@ const { description, title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link id="icon-page" rel="icon" type="image" href="/logo.png" />
+		<link rel="icon" type="image" href="/logo.png" />
 		<title>{title}</title>
 	</head>
 	<body>
@@ -60,9 +60,7 @@ const { description, title } = Astro.props;
 			backdrop-filter: blur(10px);
 		}
 	}
-	#icon-page {
-		filter: invert(100%);
-		-webkit-filter: invert(100%);
-		background-color: black;
+	.text_header_footer:hover {
+		text-shadow: #fff 0px 0px 10px;
 	}
 </style>
