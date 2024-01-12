@@ -1,5 +1,9 @@
 ---
 import Logo from "./Logo.astro";
+
+import { getI18N } from '../i18n/';
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
 ---
 
 
@@ -13,50 +17,45 @@ import Logo from "./Logo.astro";
           </div>
           <div class="sm:grid gap-8 sm:gap-6 sm:grid-cols-3 text-center">
               <div class="mb-8 sm:mb-0">
-                  <h2 class="sm:mb-6 mb-3 text-sm font-semibold uppercase text-white">Legal</h2>
+                  <h2 class="sm:mb-6 mb-3 text-sm font-semibold uppercase text-white">{i18n.FOOTER_1_TITLE}</h2>
                   <ul class="text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="https://flowbite.com/" class="text_header_footer">Aviso Legal</a>
+                          <a href="https://flowbite.com/" class="text_header_footer">{i18n.FOOTER_1_CONTENT_1}</a>
                       </li>
                       <li class="mb-4">
-                          <a href="https://tailwindcss.com/" class="text_header_footer">Privacidad</a>
+                          <a href="https://tailwindcss.com/" class="text_header_footer">{i18n.FOOTER_1_CONTENT_2}</a>
                       </li>
                       <li>
-                        <a href="https://tailwindcss.com/" class="text_header_footer">Cookies</a>
+                        <a href="https://tailwindcss.com/" class="text_header_footer">{i18n.FOOTER_1_CONTENT_3}</a>
                     </li>
                   </ul>
               </div>
               <div class="mb-8 sm:mb-0">
-                  <h2 class="sm:mb-6 mb-3 text-sm font-semibold uppercase text-white">Web Map</h2>
+                  <h2 class="sm:mb-6 mb-3 text-sm font-semibold uppercase text-white">{i18n.FOOTER_2_TITLE}</h2>
                   <ul class="text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="/" class="text_header_footer">Home</a>
+                          <a href="/" class="text_header_footer">{i18n.FOOTER_2_CONTENT_1}</a>
                       </li>
                       <li class="mb-4">
-                          <a href="/info" class="text_header_footer">Info</a>
+                          <a href="/info" class="text_header_footer">{i18n.FOOTER_2_CONTENT_2}</a>
                       </li>
                       <li>
-                        <a href="/archivo" class="text_header_footer">Archivo</a>
+                        <a href="/archivo" class="text_header_footer">{i18n.FOOTER_2_CONTENT_3}</a>
                     </li>
                   </ul>
               </div>
               <div>
-                  <h2 class="sm:mb-6 mb-3 text-sm font-semibold uppercase text-white">Legal</h2>
-                  <ul class="text-gray-400 font-medium">
-                      <li class="mb-4">
-                          <a href="#" class="text_header_footer">Política de Privacidad</a>
-                      </li>
-                      <li>
-                          <a href="#" class="text_header_footer">Terminos y condiciones</a>
-                      </li>
-                  </ul>
+                  <h2 class="sm:mb-6 mb-3 text-sm font-semibold uppercase text-white">{i18n.FOOTER_3_TITLE}</h2>
+                    <div class="flex justify-center items-center">
+                        <img class="w-24 h-20 m-auto" src="/UBIQ_LOGO.svg" alt="Logo de UBIQ">
+                    </div>
               </div>
           </div>
       </div>
       <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
       <div class="md:flex md:items-center md:justify-between">
           <div class="text-center">        
-          <span class="text-sm text-gray-500">© 2021 - 2024 <a href="https://flowbite.com/" class="hover:underline">Premios ESLAND</a>. All Rights Reserved. Esta no es la web oficial, desarrollada por Uriel Jolodovsky con fines prácticos.
+          <span class="text-sm text-gray-500">© 2021 - 2024 <a href="https://premiosesland.com" class="text_header_footer">{i18n.LAST_FOOTER_1}</a>{i18n.LAST_FOOTER_2}
           </span>
           </div>
           <div class="flex mt-4 justify-center items-center sm:mt-0 ms-5">
