@@ -24,14 +24,27 @@ import Logo from "./Logo.astro"
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
             </svg>
         </button>
+        <button id="menu-hamburger-close" class="hidden hover:cursor-pointer">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
     </div>
     </div>
-    <div id="menu-mobile" class="-translate-y-full transition-transform h-screen w-full md:hidden bg-[#151a36] fixed top-0 z-[90]">
+    <div id="menu-mobile" class="-translate-y-full transition-transform h-screen w-full md:hidden bg-[#151a36]/90 fixed top-0 z-[90]">
         <nav id="menu-mobile-nav" class="h-full w-full flex flex-col justify-center items-center gap-y-10">
-            <a class="text-xl">VOTÁ</a>
-            <a class="text-xl">INFO</a>
-            <a class="text-xl">ARCHIVO</a>
+            <a class="text-xl text_header_footer hover:cursor-pointer">VOTÁ</a>
+            <a href="/info" class="text-xl text_header_footer hover:cursor-pointer">INFO</a>
+            <a href="/archivo" class="text-xl text_header_footer hover:cursor-pointer">ARCHIVO</a>
+            <div class="flex justify-center items-center whitespace-nowrap border rounded-[25px] px-6 py-2">
+                <button class="text-xl text_header_footer w-fit">
+                    ESLAND: EL DOCUMENTAL
+                </button>
+            </div>
         </nav>
+        <div class="bottom-0 flex justify-center items-center gap-8">
+            <!-- iconos redes sociales -->
+        </div>
     </div>
 </header>
 
@@ -39,11 +52,11 @@ import Logo from "./Logo.astro"
     document.addEventListener("DOMContentLoaded", () => {
         const menu_hamburger = document.getElementById('menu-hamburger')
         const menu_mobile = document.getElementById('menu-mobile')
+        const menu_hamburger_close = document.getElementById('menu-hamburger-close')
         console.log(menu_hamburger + ' ' + menu_mobile + "hola")
 
         menu_hamburger?.addEventListener('click', function() {
-            console.log('hola')
-            menu_mobile?.classList.toggle('-translate-y-0')
+            menu_mobile?.classList.toggle('translate-y-0')
             document.body.classList.toggle('overflow-hidden')
         })
         
