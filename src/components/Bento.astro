@@ -6,7 +6,7 @@ const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 <section
-    class="w-full max-w-[1400px] grid grid-cols-10 auto-rows-[35rem] gap-4 mx-auto p-20"
+    class="w-full max-w-[1400px] grid grid-cols-10 auto-rows-[35rem] gap-4 mx-auto md:p-20 px-5 pb-10 pt-10"
 >
     <BentoItem class="col-span-10 md:col-span-6" title={i18n.BENTO_1_TITLE}>
         <div 
