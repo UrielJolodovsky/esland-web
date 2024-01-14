@@ -31,8 +31,8 @@ import Logo from "./Logo.astro"
         </button> -->
     </div>
     </div>
-    <div id="menu-mobile" class="-translate-y-full transition-transform h-screen w-full md:hidden bg-[#151a36]/90 fixed top-0 left-0 right-0 z-[90]">
-        <nav id="menu-mobile-nav" class="h-full w-full flex flex-col justify-center items-center gap-y-10">
+    <div id="menu-mobile" class="-translate-y-full transition-transform duration-300 h-screen w-full md:hidden bg-[#151a36]/90 fixed top-0 left-0 right-0 z-[90]">
+        <nav id="menu-mobile-nav" class="h-5/6 flex flex-col justify-center items-center gap-y-10">
             <a class="text-xl text_header_footer hover:cursor-pointer">VOTÁ</a>
             <a href="/info" class="text-xl text_header_footer hover:cursor-pointer">INFO</a>
             <a href="/archivo" class="text-xl text_header_footer hover:cursor-pointer">ARCHIVO</a>
@@ -42,16 +42,16 @@ import Logo from "./Logo.astro"
                 </a>
             </div>
         </nav>
-        <div class="bottom-0 flex justify-center items-center gap-8">
+        <div id="social" class="p-6 justify-center items-center gap-8 flex">
             <!-- iconos redes sociales -->
             <a href="" class="">
-                <!-- Logo Instagram -->
+                <img src="i-instagram.png" alt="Logo Instagram" class="w-10 h-10">
             </a>
             <a href="" class="">
-                <!-- Logo Twitter -->
+                <img src="i-twitter.png" alt="Logo Twitter" class="w-10 h-10">
             </a>
             <a href="" class="">
-                <!-- Logo Reddit -->
+                <img src="i-reddit.png" alt="Logo Reddit" class="w-10 h-10">
             </a>
         </div>
     </div>
@@ -66,8 +66,5 @@ import Logo from "./Logo.astro"
             menu_mobile?.classList.toggle('translate-y-0')
             document.body.classList.toggle('overflow-hidden')
         })
-        
 })
-
-
 </script>
