@@ -5,15 +5,19 @@ const i18n = getI18N({ currentLocale })
 ---
 
 
-<div class="bg-black/30 rounded-xl text-xs hover:bg-black/70 group flex flex-col items-center gap-y-1">
+<div class="group gap-3 block">
+<div class="bg-black/30 rounded-md text-xs hover:bg-black/70 block p-1">
     <button type="button" class="flex justify-start items-center gap-2 px-3 py-1" aria-expanded="true">
         <!-- Bandera España -->
         <span>{currentLocale == 'es' ? "Español" : "Catalá"}</span>
         <!-- Flecha para abajo -->
     </button>
-    <button type="button" class="hidden group-hover:flex justify-start items-center gap-2 px-3 py-1" aria-expanded="true">
+</div>
+<div class="bg-black/30 hover:bg-black/70">
+    <button type="button" class="hidden group-hover:block justify-start items-center gap-2 px-3 py-1 rounded-md text-xs" aria-expanded="true">
         <!-- Bandera Catalan -->
         <span>{currentLocale == 'ca' ? "Español" : "Catalá"}</span>
         <!-- Flecha para abajo -->
     </button>
+</div>
 </div>

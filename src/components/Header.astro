@@ -1,5 +1,6 @@
 ---
 import Logo from "./Logo.astro"
+import LanguageSelector from "./LanguageSelector.astro"
 ---
 <header id="header-nav" class="h-16 w-full max-w-7xl top-0 fixed md:px-6 py-2 z-50 mx-auto">
     <div class="justify-between items-center flex">
@@ -12,6 +13,7 @@ import Logo from "./Logo.astro"
         <a href="" class="lg:text-base text-sm hover:cursor-pointer text_header_footer">VOTÁ</a>
         <a href="/info" class="lg:text-base text-sm hover:cursor-pointer text_header_footer">INFO</a>
         <a class="lg:text-base text-sm hover:cursor-pointer text_header_footer">ARCHIVO</a>
+        <LanguageSelector />
     </nav>
     <div class="w-60 hidden md:flex justify-center items-center whitespace-nowrap px-6 py-1 border rounded-[25px] font-semibold">
         <a href="https://www.youtube.com/watch?v=O43x26hiolw" class="lg:text-base text-sm text_header_footer">
