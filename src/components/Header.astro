@@ -9,10 +9,10 @@ import LanguageSelector from "./LanguageSelector.astro"
             <Logo class="md:w-32 w-20" />
         </a>
     </div>
-    <nav class="w-full hidden md:flex md:justify-center items-center gap-x-10 font-semibold">
+    <nav class="w-full hidden md:flex md:justify-center items-center gap-x-10 font-semibold py-1">
         <a href="" class="lg:text-base text-sm hover:cursor-pointer text_header_footer">VOTÁ</a>
         <a href="/info" class="lg:text-base text-sm hover:cursor-pointer text_header_footer">INFO</a>
-        <a class="lg:text-base text-sm hover:cursor-pointer text_header_footer">ARCHIVO</a>
+        <a href="/archivo" class="lg:text-base text-sm hover:cursor-pointer text_header_footer">ARCHIVO</a>
         <LanguageSelector />
     </nav>
     <div class="w-60 hidden md:flex justify-center items-center whitespace-nowrap px-6 py-1 border rounded-[25px] font-semibold">
@@ -33,6 +33,7 @@ import LanguageSelector from "./LanguageSelector.astro"
             <a class="text-xl text_header_footer hover:cursor-pointer">VOTÁ</a>
             <a href="/info" class="text-xl text_header_footer hover:cursor-pointer">INFO</a>
             <a href="/archivo" class="text-xl text_header_footer hover:cursor-pointer">ARCHIVO</a>
+            <LanguageSelector />
             <div class="flex justify-center items-center whitespace-nowrap border rounded-[25px] px-6 py-2">
                 <a href="https://www.youtube.com/watch?v=O43x26hiolw" class="text-xl text_header_footer w-fit">
                     ESLAND: EL DOCUMENTAL
