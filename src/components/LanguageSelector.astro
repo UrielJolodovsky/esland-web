@@ -7,10 +7,10 @@ let otherUrl;
 let newHref : string;
 
 if (url.pathname.includes('/ca')) {
-    otherUrl = url.pathname.slice(3)
+    otherUrl = url.pathname.slice(4)
     console.log(otherUrl)
 } 
-else otherUrl = url.pathname
+else otherUrl = url.pathname.slice(1)
 
  if (currentLocale == 'es') newHref = url.origin + '/ca' + otherUrl
  else newHref = url.origin + otherUrl
@@ -30,7 +30,7 @@ else otherUrl = url.pathname
             </svg>
         </button>
     </div>
-    <div class="bg-black/70 hidden rounded-md text-xs group-hover:animate-fade-down group-hover:absolute group-hover:block w-full p-1 mt-[2px]">
+    <div class="bg-black/30 hover:bg-black/70 hidden rounded-md text-xs group-hover:animate-fade-down group-hover:absolute group-hover:block w-full p-1 mt-[2px]">
         <a href={newHref} id="language-selector" type="button" class="flex justify-start items-center gap-2 px-3 py-1 w-full" aria-expanded="true">
             {currentLocale == 'ca' ?
             <img src="spain.png" alt="Bandera España" class="w-3 h-3"></img> 
