@@ -6,10 +6,7 @@ const i18n = getI18N({ currentLocale })
 let otherUrl;
 let newHref : string;
 
-if (url.pathname.includes('/ca')) {
-    otherUrl = url.pathname.slice(3)
-    console.log(otherUrl)
-} 
+if (url.pathname.includes('/ca')) otherUrl = url.pathname.slice(3)
 else otherUrl = url.pathname.slice(1)
 
  if (currentLocale == 'es') newHref = url.origin + '/ca' + otherUrl
