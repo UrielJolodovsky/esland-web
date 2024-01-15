@@ -1,0 +1,85 @@
+---
+import Header from "../components/Header.astro";
+import '@fontsource-variable/onest';
+interface Props {
+	description: string;
+	title: string;
+}
+const { currentLocale } = Astro
+const { description, title } = Astro.props;
+---
+
+<!doctype html>
+<html lang={currentLocale}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image" href="/logo.png" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header />
+		<slot />
+	</body>
+</html>
+
+<style is-global>
+    	:root {
+		color-scheme: dark;
+	}
+	html {
+		font-family: "Onest Variable", system-ui, sans-serif;
+		background: #151a36;
+		scroll-behavior: smooth;
+	}
+	body {
+  		font-family: 'Onest Variable', sans-serif;
+	}
+
+	/* ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+        backdrop-filter: blur(10px);
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+      } */
+
+	p {
+		color: rgba(255, 255, 255, 0.9);
+		line-height: 1.4;
+		margin-bottom: 1em;
+		font-weight: 100;
+		font-size: 1em;
+		letter-spacing: .5px;
+	}
+	p strong {
+		color: white;
+		font-weight: 700;
+	}
+	#header-nav {
+		animation: blur linear both;
+		animation-timeline: scroll();
+		animation-range: 0 500px;
+	}
+	@keyframes blur {
+		to {
+			box-shadow: 0px 5px 50px -5px hsla(0, 0%, 100%, 0.1),
+				0px 2px 0 1px hsla(0, 0%, 100%, 0.1);
+			background: rgba(0, 0, 0, .3);
+			backdrop-filter: blur(10px);
+		}
+	}
+	.text_header_footer:hover {
+		text-shadow: #fff 0px 0px 10px;
+	}
+</style>
