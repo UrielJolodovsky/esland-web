@@ -12,3 +12,4 @@ Creada para fines educativos personales.
 - [ ] Empezar a realizar las páginas Info y Archivo. 
 - [ ] Realizar en la página de votación un sistema de voto similar al de la página de los ESLAND.
 - [ ] Realizarle un efecto a los logos del Header para celulares.
+- [ ] Cambiar las imágenes PNG del Header por SVG.

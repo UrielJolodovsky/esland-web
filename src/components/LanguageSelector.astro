@@ -4,18 +4,16 @@ const { currentLocale, url } = Astro
 const i18n = getI18N({ currentLocale })
 
 let otherUrl;
+let newHref : string;
+
 if (url.pathname.includes('/ca')) {
     otherUrl = url.pathname.slice(3)
     console.log(otherUrl)
-} else {
-    otherUrl = url.pathname
-}
-let newHref : string;
- if (currentLocale == 'es') {
-    newHref = url.origin + '/ca' + otherUrl
- } else {
-        newHref = url.origin + otherUrl
-    }
+} 
+else otherUrl = url.pathname
+
+ if (currentLocale == 'es') newHref = url.origin + '/ca' + otherUrl
+ else newHref = url.origin + otherUrl
 ---
 
 
