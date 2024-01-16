@@ -1,18 +1,24 @@
 ---
 import Logo from "./Logo.astro"
 import LanguageSelector from "./LanguageSelector.astro"
+
+const { currentLocale, url } = Astro
+
+let href:string;
+if (currentLocale === 'es')  href = url.origin
+else href = `${url.origin}/${currentLocale}`
 ---
 <header id="header-nav" class="h-16 w-full max-w-7xl top-0 fixed md:px-6 py-2 z-50 mx-auto">
     <div class="justify-between items-center flex">
     <div class="w-60 z-[100]">
-        <a href="#video" class="">
+        <a href="/" class="">
             <Logo class="md:w-32 w-20" />
         </a>
     </div>
     <nav class="w-full hidden md:flex md:justify-center items-center gap-x-10 font-semibold py-1">
         <a href="" class="lg:text-base text-sm hover:cursor-pointer text_header_footer">VOTÁ</a>
-        <a href="/info" class="lg:text-base text-sm hover:cursor-pointer text_header_footer">INFO</a>
-        <a href="/archivo" class="lg:text-base text-sm hover:cursor-pointer text_header_footer">ARCHIVO</a>
+        <a href=`${href}/info` class="lg:text-base text-sm hover:cursor-pointer text_header_footer">INFO</a>
+        <a href=`${href}/archivo` class="lg:text-base text-sm hover:cursor-pointer text_header_footer">ARCHIVO</a>
         <LanguageSelector />
     </nav>
     <div class="w-60 hidden md:flex justify-center items-center whitespace-nowrap px-6 py-1 border rounded-[25px] font-semibold">
@@ -31,8 +37,8 @@ import LanguageSelector from "./LanguageSelector.astro"
     <div id="menu-mobile" class="-translate-y-full transition-transform duration-300 h-screen w-full md:hidden bg-[#151a36]/90 fixed top-0 left-0 right-0 z-[90]">
         <nav id="menu-mobile-nav" class="h-5/6 flex flex-col justify-center items-center gap-y-10">
             <a class="text-xl text_header_footer hover:cursor-pointer">VOTÁ</a>
-            <a href="/info" class="text-xl text_header_footer hover:cursor-pointer">INFO</a>
-            <a href="/archivo" class="text-xl text_header_footer hover:cursor-pointer">ARCHIVO</a>
+            <a href=`${href}/info` class="text-xl text_header_footer hover:cursor-pointer">INFO</a>
+            <a href=`${href}/archivo` class="text-xl text_header_footer hover:cursor-pointer">ARCHIVO</a>
             <LanguageSelector />
             <div class="flex justify-center items-center whitespace-nowrap border rounded-[25px] px-6 py-2">
                 <a href="https://www.youtube.com/watch?v=O43x26hiolw" class="text-xl text_header_footer w-fit">
